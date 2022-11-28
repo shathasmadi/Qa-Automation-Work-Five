@@ -5,7 +5,6 @@
     <classes>
       <class name="SmartBuy">
         <methods>
-          <include name="we_need_to_check_the_correct_price"/>
           <include name="Test_Adding_item_SAMSUNG_50_inch"/>
           <include name="this_is_before_test"/>
         </methods>

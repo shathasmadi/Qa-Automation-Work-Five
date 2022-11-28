@@ -31,12 +31,12 @@ public class SmartBuyDiscount {
 		String The_Before_All_item_prise = the_update_all[0].trim();
 		Double Before_price = Double.parseDouble(The_Before_All_item_prise);
 
-		String descount = driver
+		String discount = driver
 				.findElement(By.xpath(
 						"//*[@id=\"newtab-Featured\"]/div/div[1]/div/div/div/div[2]/div/div[2]/div[2]/div/div/span[1]"))
 				.getText();
-		String updated = descount.replace("%", "").trim();
-		Double descount_price = Double.parseDouble(updated);
+		String updated = discount.replace("%", "").trim();
+		Double discount_price = Double.parseDouble(updated);
 
 		String origin_number = driver
 				.findElement(By.xpath(
@@ -47,7 +47,7 @@ public class SmartBuyDiscount {
 		Double origin_parse = Double.parseDouble(origin_number_trim);
 		System.out.println(origin_parse);
 
-		double discounts = descount_price * Before_price / 100;
+		double discounts = discount_price * Before_price / 100;
 		double Expected = (Before_price) - (discounts);
 		double Acual = origin_parse;
 
